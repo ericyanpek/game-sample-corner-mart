@@ -1,0 +1,6 @@
+.customer-emotion{display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:3px 7px;border-radius:6px;font-size:11px;line-height:1.4;background:#e5ebe1;color:#456452}
+.customer-emotion::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0}
+.customer-emotion.happy,.action-label.emotion-cue.happy{background:#e3f3db;color:#366441;border-color:#8bb587}
+.customer-emotion.disappointed,.action-label.emotion-cue.disappointed{background:#fff0d9;color:#835d2f;border-color:#c5a16b}
+.customer-emotion.impatient,.action-label.emotion-cue.impatient{background:#f8e3dc;color:#984b39;border-color:#c6907e}
+.action-label.emotion-cue{font-size:11px;font-weight:600;line-height:1.4;padding:4px 8px;box-shadow:0 2px 6px #302d2720;pointer-events:none}

@@ -1,0 +1,142 @@
+body.windowed-game{height:100dvh;overflow:hidden;background:radial-gradient(ellipse at 18% 0%,#e6ecdf 0,transparent 48%),#f1eee5}
+.windowed-game [hidden]{display:none!important}
+.windowed-game .topbar{height:64px;max-width:1600px;padding:0 30px;border:0}
+.windowed-game .brand{font-size:18px;gap:10px}.windowed-game .brandmark{width:33px;height:38px;font-size:13px;border-radius:12px 12px 4px 4px}
+.windowed-game .brand small{font-size:7px;letter-spacing:1.3px}.windowed-game .top-actions{font-size:10px}
+.windowed-game main{display:block;max-width:1600px;padding:0 24px;margin:0 auto;height:calc(100dvh - 94px);min-height:0}
+.windowed-game>footer{height:30px;max-width:1600px;padding:9px 30px;font-size:9px;line-height:1}
+.windowed-game>footer>span{font-size:7px}
+.game-window{height:100%;max-height:1080px;border:1px solid #d8ddce;border-radius:22px;background:#faf8ef;box-shadow:0 14px 50px #2a493715;overflow:hidden;display:grid;grid-template-rows:66px minmax(0,1fr) 68px 25px}
+.game-hud{display:flex;align-items:center;gap:25px;padding:10px 22px;border-bottom:1px solid #dce2d2;z-index:2;background:#fbf9f0}
+.hud-day{border:0;background:transparent;text-align:left;color:#416b56;min-width:130px;padding:0}
+.hud-day>span{display:block;font-size:10px;margin-bottom:3px}.hud-day>strong{font-size:22px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.game-hud .wallet{position:static;display:flex;padding:0;background:transparent;box-shadow:none;border:0;gap:14px;white-space:nowrap;transform:none}
+.game-hud .wallet .coin{display:grid;width:30px;height:30px;font-size:20px}
+.game-hud .wallet strong{font-size:22px}.game-hud .wallet small{font-size:9px}.game-hud .wallet strong span{font-size:10px}
+.game-hud .wallet-divider{height:27px;margin:0 3px}
+#hud-goal{font-size:11px;color:#6e8767;margin-left:0;white-space:nowrap}
+#hud-wallet{display:flex;align-items:center;gap:20px;min-width:0}
+#hud-goal.goal-reached{color:#38634c;font-weight:700}
+#visitor-reset-dialog{width:min(520px,calc(100vw - 28px));max-height:calc(100dvh - 28px);padding:24px;border:1px solid #cbd7c3;border-radius:18px;background:#faf8ef;color:#385444}
+#visitor-reset-dialog::backdrop{background:#16382a66}
+#visitor-reset-dialog h2{font-size:21px;line-height:1.4;margin:10px 0}
+#visitor-reset-dialog p{font-size:14px;line-height:1.7}
+.visitor-reset-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.visitor-reset-actions button{min-height:44px;line-height:1.5;white-space:normal}
+#visitor-reset-error{color:#994530}
+#hud-actions{margin-left:auto}
+#hud-actions .primary{width:auto;padding:11px 17px;min-height:0;font-size:12px;white-space:nowrap;box-shadow:none}
+#hud-actions .quiet{white-space:nowrap}
+.game-body{display:grid;grid-template-columns:minmax(0,1fr);min-height:0;overflow:hidden;position:relative;background:#e3e9dc}
+.has-inspector .game-body{grid-template-columns:minmax(0,1fr) 330px}
+.scene-area{min-width:0;min-height:0;position:relative}
+.windowed-game .game-stage,.windowed-game.business-day .game-stage{width:100%;height:100%;min-height:0;max-height:none;border:0;border-radius:0;background:#dbe4d6}
+.windowed-game #world{outline-offset:-4px;touch-action:none}
+.windowed-game .view-reset{top:16px;right:16px;font-size:10px;background:#fffaf0eb;border:1px solid #f9fcf4;border-radius:20px;padding:8px 12px;color:#668068}
+.windowed-game .stage-caption{bottom:13px;left:18px;right:auto;font-size:10px;pointer-events:none}
+.windowed-game #scene-caption{background:#faf9efbd;padding:7px 10px;border-radius:7px}
+.windowed-game .world-label{font-size:10px;padding:6px 9px;border-radius:8px}
+.windowed-game .world-label:hover{background:#fff9de;color:#3f674c;box-shadow:0 2px 10px #2c51302a}
+.windowed-game #toast{bottom:52px;font-size:11px}
+.game-dock{display:flex;gap:20px;align-items:center;justify-content:center;border-top:1px solid #dbe1d0;padding:7px 20px;background:#faf8ef;z-index:2}
+.game-dock nav{display:flex;justify-content:center;gap:6px}
+.game-dock nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:68px;padding:6px 15px;border:1px solid transparent;border-radius:13px;background:transparent;color:#7c8a72;font-size:10px;position:relative}
+.game-dock nav svg{width:21px;height:21px}
+.game-dock nav button:hover{background:#eef1e5;color:#52735c}.game-dock nav button.active{background:#e4eddb;color:#3c6a4d;border-color:#c4d2b9}
+#game-time-controls{display:flex;align-items:center;gap:7px;border-left:1px solid #dde3d2;padding-left:22px}
+#game-time-controls button{font-size:10px;background:#f0f2e6;border:1px solid #dbe1cd;border-radius:9px;min-width:64px;padding:10px 12px;color:#6a8062}
+.window-foot{display:flex;align-items:center;justify-content:space-between;padding:0 22px;font-size:9px;color:#94a08b;background:#f3f4e9}
+.windowed-game #inspector{border:0;border-left:1px solid #d8dfcb;background:#faf8ef;padding:0;display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden}
+.windowed-game #inspector[hidden],.inspector-pane[hidden]{display:none!important}
+.inspector-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:19px 19px 14px;flex-shrink:0;border-bottom:1px solid #e3e6d9}
+.inspector-heading small{font-size:9px;color:#93a086;letter-spacing:1px}.inspector-heading h2{margin:5px 0 0;font-size:18px;font-weight:600}
+.inspector-actions{display:flex;align-items:center;gap:4px}
+#inspector-size{display:none}
+#close-inspector{border-radius:50%;font-size:21px;padding:0;width:29px;height:29px;line-height:25px;background:#f0f0e4}
+#inspector-scroll{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#ced8c1 transparent;min-height:0;padding:18px}
+.inspector-pane{min-width:0}
+.windowed-game .inspector-pane .heading{display:none}
+.inspector-pane .day-panel,.inspector-pane .restock-panel,.inspector-pane .shopping-panel,.inspector-pane .layout-panel{margin:0;padding:0;border:0;border-radius:0;background:transparent!important}
+.inspector-pane .shopping-heading h2,.inspector-pane .layout-heading h2{font-size:15px;margin:3px 0 7px}
+.inspector-pane .shopping-heading .eyebrow,.inspector-pane .layout-heading .eyebrow{display:none}
+.inspector-pane .shopping-actions{display:none}
+.inspector-pane .shelf-tabs{margin:0 0 16px}.inspector-pane .stock-panel>h2{font-size:19px;margin:11px 0}
+.inspector-pane .stock-panel>.section-heading{margin-bottom:12px}
+.inspector-pane .subtle{font-size:10px;line-height:1.7;margin-bottom:15px}
+.inspector-pane .day-panel-heading h2{font-size:17px;margin-bottom:14px}
+.inspector-pane .day-forecast{display:flex;flex-direction:column;gap:12px;padding:12px 10px;margin:13px 0}
+.inspector-pane .day-panel-bottom{display:block}
+.inspector-pane .day-panel-bottom>span{font-size:11px;line-height:1.8}
+.inspector-pane .theme-options{gap:5px;margin-bottom:18px}
+.inspector-pane .theme-options button{padding:8px 4px;flex-direction:column;gap:5px;text-align:center;justify-content:center}
+.inspector-pane .theme-options strong{font-size:10px}.inspector-pane .theme-options small{font-size:8px}
+.inspector-pane .theme-options img{width:33px;height:34px}
+.inspector-pane .day-theme-footer{font-size:9px;line-height:1.8}
+.inspector-pane .day-invite{padding:12px;gap:8px;flex-direction:column;align-items:flex-start}
+.inspector-pane .day-invite small{line-height:1.7}.inspector-pane .day-invite strong{font-size:13px}
+.inspector-pane .goal-card{padding:12px}.inspector-pane .goal-icon{display:none}.inspector-pane #goal-value{font-size:9px}
+.inspector-pane .insight{margin:17px 0;display:block}.inspector-pane .insight-dot{display:none}.inspector-pane #losses{display:block;margin-top:8px}
+.inspector-pane .shopping-heading{display:block}.inspector-pane .shopping-hint{font-size:10px;line-height:1.8}
+.inspector-pane .shopping-roster{grid-template-columns:1fr}
+.inspector-pane .customer-card{padding:13px}.inspector-pane .customer-card-heading{flex-direction:row;align-items:center}
+.one-guest .customer-card:not(.selected){display:none}
+#all-guests{font-size:10px;margin-bottom:14px}
+.inspector-pane .shopping-footer{grid-template-columns:1fr;gap:13px}
+.inspector-pane .shopping-stats{justify-content:space-between;gap:8px}
+.inspector-pane .shopping-receipt{border-left:0;border-top:1px dashed #d7deca;padding:10px 0 0}
+.inspector-pane .restock-options{gap:5px;margin-top:12px}.inspector-pane .restock-options button{padding:9px 6px}
+.inspector-pane .restock-options strong{font-size:10px}.inspector-pane .restock-options small{font-size:9px}
+.inspector-pane .restock-tasks{grid-template-columns:1fr;gap:7px}.inspector-pane .restock-arrow{display:none}
+.inspector-pane .restock-tasks>div{padding:10px 12px}.inspector-pane .restock-footer{font-size:9px;gap:6px;margin-bottom:19px}
+.inspector-pane .layout-heading{display:block}.inspector-pane #toggle-routes{margin:4px 0 13px;font-size:10px}
+.inspector-pane .layout-options{grid-template-columns:1fr}
+.inspector-pane .layout-stats{grid-template-columns:1fr;gap:12px}.inspector-pane .layout-stats>div{display:grid;grid-template-columns:1fr 80px}
+.inspector-pane .layout-stats strong{font-size:19px;margin:0;text-align:right}.inspector-pane .layout-stats span{font-size:9px}
+.inspector-pane .layout-legend{font-size:9px;gap:8px}
+.inspector-pane .upgrade-panel{padding:0;margin:0;border:0}
+.inspector-pane .upgrade-panel>.section-heading .eyebrow{display:none}
+.inspector-pane .upgrade-panel>h2{font-size:15px;margin:0 0 16px}
+.inspector-pane .learning{margin-top:20px}.inspector-pane .learning summary span{display:none}
+.inspector-pane .basket-preview{display:block}.inspector-pane .basket-preview img{width:100%}.inspector-pane .basket-preview p{padding:0 12px}
+.inspector-pane .layout-previews,.inspector-pane .crate-previews{grid-template-columns:1fr}
+.inspector-pane .event{font-size:10px}.inspector-pane .log-panel{margin-top:20px}
+.inspector-pane .learning-actions{gap:7px}.inspector-pane .lab-banner{font-size:10px;margin-top:18px}
+.windowed-game .welcome-card{max-width:min(430px,90%);padding:27px 34px}.windowed-game .welcome h2{font-size:32px}
+.windowed-game .welcome p{font-size:12px}.windowed-game .welcome .eyebrow{font-size:8px}
+@media(max-width:1050px){
+  .has-inspector .game-body{grid-template-columns:minmax(0,1fr) 290px}
+  .game-hud{gap:17px;padding:10px 16px}.hud-day{min-width:108px}.game-hud .wallet .coin{display:none}
+  .game-dock{gap:14px;padding-inline:12px}.game-dock nav button{min-width:56px;padding-inline:10px}
+}
+@media(max-width:720px){
+  .windowed-game .topbar{height:51px;padding:0 14px}.windowed-game .brand{font-size:15px}.windowed-game .brand small{display:none}
+  .windowed-game .brandmark{width:26px;height:30px;font-size:11px}.windowed-game .top-actions>span{display:none}
+  .windowed-game main{height:calc(100dvh - 61px);padding:0 8px}.windowed-game>footer{display:none}
+  .game-window{border-radius:15px;grid-template-rows:64px minmax(0,1fr) 61px 22px}
+  .game-hud{padding:8px 11px;gap:13px}.hud-day{min-width:82px}.hud-day>span{font-size:8px}.hud-day>strong{font-size:18px}
+  .game-hud .wallet{gap:8px}.game-hud .wallet-divider{display:none}.game-hud .wallet small{font-size:8px}.game-hud .wallet strong{font-size:18px}
+  #hud-actions .primary,#hud-actions .quiet{padding:10px 9px;font-size:10px;max-width:104px;white-space:normal;text-align:center;line-height:1.6}
+  .game-body{display:flex;flex-direction:column}.has-inspector .game-body{display:flex}
+  .scene-area{flex:1}.windowed-game #inspector{height:min(39dvh,330px);flex:0 0 auto;border:0;border-top:1px solid #d5ddc9}
+  .inspector-heading{padding:10px 14px}.inspector-heading small{display:none}.inspector-heading h2{font-size:15px;margin:0}
+  #inspector-scroll{padding:13px 15px}
+  .game-dock{gap:0;padding:5px 6px;justify-content:space-between}
+  .game-dock nav{gap:0;flex:1;justify-content:space-around}.game-dock nav button{min-width:0;flex:1;padding:6px 2px;font-size:9px;border-radius:10px}
+  .game-dock nav svg{width:18px;height:18px}
+  #game-time-controls{gap:4px;padding-left:6px;margin-left:5px}
+  #game-time-controls button{min-width:0;padding:9px 5px;font-size:9px}
+  .window-foot{font-size:8px;padding:0 12px}
+  .windowed-game .view-reset{top:9px;right:10px;font-size:9px;padding:6px 9px}
+  .windowed-game .stage-caption{bottom:8px;left:10px;font-size:8px}
+  .windowed-game .world-label{font-size:8px;padding:4px 6px}
+  .inspector-pane .restock-tasks{grid-template-columns:1fr 1fr}
+  .inspector-pane .layout-stats{grid-template-columns:repeat(3,1fr);gap:8px}.inspector-pane .layout-stats>div{display:block}.inspector-pane .layout-stats strong{text-align:left;margin:5px 0}
+  .inspector-pane .day-forecast{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .inspector-pane .forecast-periods>div{grid-template-columns:76px 1fr 24px;gap:3px;font-size:8px}
+  .inspector-pane .forecast-products{font-size:10px;display:flex;flex-direction:column;gap:5px}
+  .windowed-game .welcome-card{padding:18px 24px}.windowed-game .welcome h2{font-size:25px;margin:10px 0}.windowed-game .welcome p{font-size:11px;line-height:1.7;margin-bottom:15px}
+}
+@media(max-height:550px) and (min-width:721px){
+  .windowed-game .topbar{height:45px}.windowed-game main{height:calc(100dvh - 55px)}.windowed-game>footer{display:none}
+  .game-window{grid-template-rows:54px minmax(0,1fr) 51px 20px}.game-dock nav button{flex-direction:row}
+}

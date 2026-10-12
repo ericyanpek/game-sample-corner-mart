@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f4f0e7">
+  <link rel="icon" href="data:,">
+  <title>街角便利店 · Corner Mart</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brandmark">小<br>店</span><span>街角小店<small>CORNER MART · 一间店，一点好生意</small></span></a>
+    <div class="top-actions"><span id="save-status">本地存档</span><button id="save" class="quiet">保存</button><button id="pause" class="quiet">暂停</button></div>
+  </header>
+  <main>
+    <section class="play-column">
+      <div id="lab-banner" class="lab-banner hidden"><span>独立货架实验店 · 已备好升级预算 · 单独保存进度</span><a href="?play=1">返回我的小店 ↗</a></div>
+      <div class="heading"><div><span class="eyebrow">THE NEIGHBOURHOOD IS WAKING UP</span><h1>今天，也好好开店。</h1></div><div class="day-clock"><span class="sun">☀</span> 营业 <span id="clock">00:00</span></div></div>
+      <a id="day-invite" class="day-invite" href="?day=1"><span><strong>试着把今天，经营得更好。</strong><small>3 分钟营业 · 打烊结算 · 同样客流，再试一个想法</small></span><b>营业日挑战 ↗</b></a>
+      <section id="day-panel" class="day-panel hidden" aria-labelledby="day-title">
+        <div class="theme-options" role="group" aria-label="选择营业主题">
+          <button data-theme="breakfast"><img loading="lazy" decoding="async" fetchpriority="low" width="173" height="192" src="/assets/days/breakfast.webp" alt=""><span><strong>早餐日</strong><small>饮料＋面包</small></span></button>
+          <button data-theme="hot"><img loading="lazy" decoding="async" fetchpriority="low" width="173" height="192" src="/assets/days/hot.webp" alt=""><span><strong>炎热日</strong><small>单买饮料更多</small></span></button>
+          <button data-theme="rush"><img loading="lazy" decoding="async" fetchpriority="low" width="173" height="192" src="/assets/days/rush.webp" alt=""><span><strong>下班高峰</strong><small>中段集中到店</small></span></button>
+        </div>
+        <div class="day-panel-heading"><div><span id="day-attempt" class="eyebrow">BREAKFAST AT THE CORNER</span><h2 id="day-title">准备好，再开门。</h2></div><strong id="day-timer">03:00</strong></div>
+        <div class="day-phases" aria-label="营业日阶段"><span data-phase="preparing">01 筹备</span><span data-phase="open">02 营业</span><span data-phase="closing">03 收尾</span><span data-phase="settled">04 结算</span></div>
+        <div class="day-progress"><div id="day-progress-bar"></div></div>
+        <p id="day-description"></p>
+        <div id="day-forecast" class="day-forecast"></div><p id="day-advice" class="day-advice"></p>
+        <div class="day-panel-bottom"><span id="day-goal"></span><button id="open-day" class="primary">开门营业 · 3 分钟</button><button id="show-day-report" class="quiet hidden">查看今日结算</button></div>
+        <small id="day-previous"></small>
+        <div class="day-theme-footer"><span id="theme-switch-note">各主题分别保存进度与最近 5 次成绩。</span></div>
+      </section>
+      <div class="game-stage" id="stage">
+        <canvas id="world" tabindex="0" aria-label="街角小店三维场景：拖动或方向键旋转，滚轮缩放；点选人物或物件近看，点空白或按 Escape 返回全景"></canvas>
+        <div id="asset-loading" class="asset-loading" aria-label="准备店铺">
+          <div class="loading-card">
+            <h2 id="loading-title">小店正在准备中</h2>
+            <p id="loading-detail" role="status">正在连接，准备人物和货架…</p>
+            <progress id="loading-progress" aria-label="店铺资源准备进度"></progress>
+            <small>准备好之前不会消耗营业时间。</small>
+            <button id="loading-retry" class="primary" hidden>重新加载</button>
+          </div>
+        </div>
+        <div class="wallet"><span class="coin">◈</span><div><small>可用现金</small><strong id="cash">120<span> 币</span></strong></div><div class="wallet-divider"></div><div><small>完成订单</small><strong id="sold">0<span> 单</span></strong></div></div>
+        <div class="camera-tools">
+          <div class="camera-actions">
+            <button id="sound-toggle" aria-label="游戏音效已开启，点击静音" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z"/><path class="sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-muted" d="m16 9 6 6m0-6-6 6"/></svg><span>音效</span></button>
+            <button id="camera-toggle" aria-expanded="false" aria-controls="camera-panel">↔ 视角</button>
+            <button id="reset-camera" class="view-reset" aria-label="返回全景并关闭详情">⌖ 全景</button>
+          </div>
+          <div id="camera-panel" hidden role="group" aria-label="调整观察方向">
+            <div class="camera-elevations">
+              <button data-camera-elevation="15" aria-label="低位观察，向下看 15 度">低位 <small>15°</small></button>
+              <button data-camera-elevation="8" aria-label="接近平视，向下看 8 度">近平视 <small>8°</small></button>
+            </div>
+            <div class="camera-pad">
+              <button data-camera-direction="up" aria-label="抬高视角 10 度" title="抬高视角">↑</button>
+              <button data-camera-direction="left" aria-label="向左环绕 30 度" title="向左环绕">←</button>
+              <span aria-hidden="true">◉</span>
+              <button data-camera-direction="right" aria-label="向右环绕 30 度" title="向右环绕">→</button>
+              <button data-camera-direction="down" aria-label="降低视角 10 度" title="降低视角">↓</button>
+            </div>
+            <p id="camera-hint">拖动可继续调整<br>点「全景」回到开店角度</p>
+            <div class="pov-picker" role="group" aria-label="选择角色第一视角">
+              <strong>从角色的眼睛看小店</strong>
+              <button id="pov-cashier" aria-pressed="false" disabled>1 号台 · 店员</button>
+              <button id="pov-worker" aria-pressed="false" disabled>2 号台 · 兼岗店员</button>
+              <label for="pov-customer-choice">跟一位街坊逛店</label>
+              <select id="pov-customer-choice" disabled><option value="">顾客进店后可选择</option></select>
+              <button id="pov-customer" aria-pressed="false" disabled>进入顾客视角</button>
+              <small>角色自动行动，你可以拖动环顾。进入时采用 1× 速度，退出恢复。</small>
+            </div>
+          </div>
+        </div>
+        <div id="pov-hud" hidden><div><strong id="pov-title"></strong><span id="pov-activity"></span></div><button id="pov-ahead">朝前看</button></div>
+        <div id="shelf-labels"></div>
+        <div id="toast" role="status"></div>
+        <div class="stage-caption"><span id="scene-caption">点选近看 · 拖动旋转 · 滚轮缩放 · 右键平移</span><button id="speed">1× 速度</button></div>
+        <div id="welcome" class="welcome">
+          <div class="welcome-card"><span class="eyebrow">YOUR LITTLE CORNER OF THE WORLD</span><h2>街坊们，<br>等你开门呢。</h2><p id="welcome-copy">12 件饮料已经上架。补货、招呼顾客，<br>把第一笔收入变成更好的小店。</p><button id="start" class="primary">正在准备店铺…</button><small>进度保存在这个浏览器中 · 离开后暂停经营</small></div>
+        </div>
+        <div id="victory" class="welcome hidden">
+          <div class="welcome-card"><span class="eyebrow">A GOOD DAY IN THE NEIGHBOURHOOD</span><h2>小店，做起来了。</h2><p id="victory-copy"></p><button id="continue" class="primary">继续经营，看看下一条街的机会</button></div>
+        </div>
+      </div>
+      <section class="restock-panel" aria-labelledby="restock-title">
+        <div id="checkout-status-panel" class="checkout-status-panel" aria-label="收银台状态"></div>
+        <div class="shopping-heading"><div><span class="eyebrow">ONE HELPER · YOUR CALL</span><h2 id="restock-title">下一箱，先补什么？</h2></div></div>
+        <div class="restock-options" role="group" aria-label="选择补货优先策略">
+          <button data-restock-policy="shortage"><strong>缺货优先</strong><small>先照顾库存最少的</small></button>
+          <button data-restock-policy="drinks"><strong>饮料优先</strong><small>优先把饮料送上架</small></button>
+          <button data-restock-policy="bread"><strong>面包优先</strong><small>优先把面包送上架</small></button>
+        </div>
+        <p id="restock-help" class="shopping-hint"></p>
+        <div class="restock-tasks">
+          <div id="restock-current-card"><small>手上这一箱</small><strong id="restock-current">暂无搬运任务</strong></div>
+          <span class="restock-arrow" aria-hidden="true">→</span>
+          <div id="restock-next-card"><small>下一箱</small><strong id="restock-next">暂无待搬订单</strong></div>
+        </div>
+        <p id="restock-queue" class="shopping-hint"></p>
+        <div class="restock-footer"><span id="restock-policy-name"></span><span id="restock-stockouts"></span></div>
+      </section>
+      <section class="shopping-panel" aria-labelledby="shopping-title">
+        <div class="shopping-heading"><div><span class="eyebrow">A LITTLE LIST FOR A GOOD MORNING</span><h2 id="shopping-title">街坊今天想买什么？</h2></div></div>
+        <p id="shopping-hint" class="shopping-hint">点顾客或清单卡片，跟着他逛一趟小店。</p>
+        <div class="shopping-roster" id="shopping-roster" role="group" aria-label="查看顾客购物清单"></div><p id="shopping-empty">开门后，第一位街坊很快就到。</p>
+        <div class="shopping-footer"><div class="shopping-stats"><span>两件合购 <b id="multi-sales">0 单</b></span><span>部分买到 <b id="partial-sales">0 单</b></span><span>清单缺货 <b id="missing-items">0 项次</b></span></div><div id="shopping-receipt" class="shopping-receipt">第一笔成交后，这里会列出买到的商品和实付金额。</div></div>
+      </section>
+      <section class="layout-panel" aria-labelledby="layout-heading">
+        <div class="layout-heading"><div><span class="eyebrow">GIVE YOUR SHOP SOME ROOM</span><h2 id="layout-heading">换个摆法，生意会怎样？</h2></div><button id="toggle-routes" class="quiet" aria-pressed="true">隐藏动线</button></div>
+        <div class="layout-options" role="group" aria-label="选择店铺布局">
+          <button data-layout="aisle"><span class="layout-mark">01</span><span><strong>通道优先</strong><small>货架沿后墙，留出中央通道</small></span><b>使用中</b></button>
+          <button data-layout="supply"><span class="layout-mark">02</span><span><strong>中岛陈列</strong><small>饮料柜放中央，保留进出通道</small></span><b>切换</b></button>
+        </div>
+        <p id="layout-status" role="status">营业中也可以调整。人物会先让出位置，再继续购物和补货。</p>
+        <div class="layout-stats"><div><small>取货后等到收银</small><strong id="layout-wait">—</strong><span id="layout-wait-samples">暂无完成记录</span></div><div><small>下单到补货上架</small><strong id="layout-delivery">—</strong><span id="layout-delivery-samples">暂无完成记录</span></div><div><small>本轮流失</small><strong id="layout-loss">0 人</strong><span id="layout-period">切换布局后重新统计</span></div></div>
+        <div class="layout-legend"><span>● 顾客路线</span><span>● 补货路线</span><span>弧线：柜门活动范围</span><span>同一时间最多 5 位顾客入店</span></div>
+        <details class="layout-compare"><summary>同条件比较两种布局 <span>固定库存、预算与客流</span></summary><p>独立试营业 10 分钟 × 3 组相同客流。两种摆法使用同一间冷藏饮料店、相同收银速度和自动补货规则。</p><button id="run-comparison" class="quiet">运行对照试营业</button><a class="quiet" href="?layout-lab=1">进入独立布局实验店 ↗</a><p id="comparison-status" role="status">对照会单独运行，不消耗你的小店现金。</p><div id="comparison-result"></div></details>
+      </section>
+      <div class="goal-card"><div class="goal-icon">↗</div><div class="goal-copy"><span class="eyebrow">今日开店目标</span><strong id="goal-title">完成 30 笔成交，解锁面包货架</strong><div class="goal-track"><div id="goal-progress"></div></div></div><span id="goal-value">0 / 30</span></div>
+      <div class="insight"><span class="insight-dot"></span><p id="insight">顾客进店后会自己选购。点击饮料货架，随时留意库存。</p><span id="losses"></span></div>
+      <details class="learning"><summary>制作与修改实验 <span>查看 Blender 资产与运行记录</span></summary>
+        <p>三档饮料货架来自同一份规格，各有独立 Blender 源文件。两套布局也分别保存为可编辑 Blender 场景，运行时复用同一套货架资产。可以先看资产对照，再在经营中购买升级；切换店铺底图也会保留当前货架与进度。</p>
+        <div class="learning-actions"><button id="open-shelf-gallery" class="quiet">三档资产对照</button><a class="quiet" href="?shelf-lab=1">进入独立升级实验 ↗</a><button id="asset-v1" class="quiet">店铺底图 V1</button><button id="asset-v2" class="quiet">店铺底图 V2</button><button id="asset-gray" class="quiet">经营灰盒</button><span id="render-metrics">等待场景</span></div>
+        <p>以下是 Blender 装配场景的资产预览；实时库存由游戏存档控制。</p><div class="basket-preview"><img loading="lazy" decoding="async" fetchpriority="low" width="720" height="620" src="/assets/shopping/basket.webp" alt="Blender 中带两个商品挂点的购物篮，分别装着饮料与面包"><p>购物篮来自原有 Blender 源文件的局部修改，新增两个商品挂点。饮料、面包继续使用已有模型。</p></div><div class="layout-previews"><figure><img loading="lazy" decoding="async" fetchpriority="low" width="960" height="751" src="/assets/layouts/aisle.webp" alt="Blender 中的通道优先布局，冷藏柜沿后墙摆放"><figcaption>通道优先 · Blender 场景源文件</figcaption></figure><figure><img loading="lazy" decoding="async" fetchpriority="low" width="960" height="751" src="/assets/layouts/supply.webp" alt="Blender 中的中岛陈列布局，冷藏柜移到入口附近"><figcaption>中岛陈列 · 同一冷藏柜移动并旋转</figcaption></figure></div>
+        <p>补货箱沿用原箱体与搬运挂点，分别增加饮料、面包和水果标识；三份源文件都可单独编辑。</p>
+        <div class="crate-previews"><figure><img loading="lazy" decoding="async" fetchpriority="low" width="640" height="540" src="/assets/restocking/crate-drinks.webp" alt="绿色饮料箱，正面有饮料罐标识"><figcaption>饮料箱</figcaption></figure><figure><img loading="lazy" decoding="async" fetchpriority="low" width="640" height="540" src="/assets/restocking/crate-bread.webp" alt="金棕色面包箱，正面有面包标识"><figcaption>面包箱</figcaption></figure><figure><img loading="lazy" decoding="async" fetchpriority="low" width="640" height="540" src="/assets/restocking/crate-fruit.webp" alt="红棕色水果箱，正面有水果标识"><figcaption>水果箱 · 自由经营</figcaption></figure></div>
+        <p id="asset-status">正在导入场景。</p><button id="new-game" class="quiet danger">重新开一家店</button>
+      </details>
+    </section>
+    <aside>
+      <section class="stock-panel">
+        <div class="section-heading"><span class="eyebrow">SHELF & STOCK</span><span id="selected-state" class="pill">营业中</span></div>
+        <div class="shelf-tabs" role="group" aria-label="选择货架">
+          <button data-product="drinks" class="active"><span class="product-icon">▥</span>饮料</button>
+          <button data-product="bread"><span class="product-icon">◒</span>面包</button>
+          <button data-product="fruit"><span class="product-icon">●</span>水果</button>
+        </div>
+        <h2 id="product-name">气泡饮料</h2><p id="product-description" class="subtle">冰冰凉凉的街坊最爱。</p>
+        <div class="stock-count"><strong id="stock-number">12 <small>/ 24 件</small></strong><span id="reserved">待结账 0</span></div>
+        <div class="stock-track"><div id="stock-progress"></div></div>
+        <div class="price-row"><span>进价 <b id="buy-price">2 币</b></span><span>售价 <b id="sell-price">5 币</b></span></div>
+        <button id="order" class="primary">补货 12 件 <span>−24 币</span></button>
+        <div class="order-note" id="order-note">先付货款，搬到货架并上架后可售。</div>
+        <p id="sku-note" class="sku-note hidden"></p>
+        <div id="delivery" class="delivery hidden"><span id="delivery-text"></span><div class="stock-track"><div id="delivery-progress"></div></div></div>
+      </section>
+      <section id="shelf-upgrade-panel" class="shelf-upgrade-panel">
+        <div class="section-heading"><span class="eyebrow">A SHELF TO GROW WITH</span><span id="shelf-tier-level">Lv.1 · 24 件</span></div>
+        <h2 id="shelf-tier-name">普通木架</h2>
+        <div class="tier-steps" aria-label="饮料货架升级路线">
+          <div data-tier-step="0" class="current owned"><img loading="lazy" decoding="async" fetchpriority="low" width="640" height="760" src="/assets/shelves/wood.webp" alt="普通木架"><span>木架</span><small>24 件</small></div>
+          <div data-tier-step="1"><img loading="lazy" decoding="async" fetchpriority="low" width="640" height="760" src="/assets/shelves/lit.webp" alt="带灯展示架"><span>带灯展示</span><small>36 件</small></div>
+          <div data-tier-step="2"><img loading="lazy" decoding="async" fetchpriority="low" width="640" height="760" src="/assets/shelves/chilled.webp" alt="冷藏展示柜"><span>冷藏展示</span><small>48 件</small></div>
+        </div>
+        <p id="shelf-tier-description" class="tier-description"></p>
+        <button id="upgrade-shelf" class="primary">升级货架</button>
+        <p id="shelf-upgrade-note" class="order-note"></p>
+      </section>
+      <section class="upgrade-panel"><div class="section-heading"><span class="eyebrow">MAKE IT A LITTLE BETTER</span><span id="upgrade-gate">成交 5 单后开启</span></div><h2>小店进步一点点</h2>
+        <button class="upgrade" data-upgrade="checkout"><span class="upgrade-symbol">↯</span><span><strong>更快的收银台</strong><small>首件 7.5 → 4 秒；第二件另加 0.8 秒</small></span><b>60 ◈</b></button>
+        <button class="upgrade" data-upgrade="staff"><span class="upgrade-symbol">♧</span><span><strong>请一位兼岗店员</strong><small>平时开2号台，补货时暂停接待</small></span><b>70 ◈</b></button>
+        <button class="upgrade" data-upgrade="marketing"><span class="upgrade-symbol">✧</span><span><strong>街坊口口相传</strong><small>客流增加，准备好库存和收银</small></span><b>50 ◈</b></button>
+      </section>
+      <section class="log-panel"><div class="section-heading"><span class="eyebrow">LITTLE THINGS HAPPENING</span><span id="queue-count">0 人排队</span></div><div id="events"></div></section>
+    </aside>
+  </main>
+  <dialog id="shelf-gallery" aria-labelledby="gallery-title">
+    <div class="gallery-heading"><div><span class="eyebrow">ONE FAMILY · THREE STAGES</span><h2 id="gallery-title">一套规格，长出三档货架。</h2></div><button id="close-shelf-gallery" class="quiet">关闭</button></div>
+    <p class="gallery-intro">以下是独立 Blender 源文件的渲染图。经营中的升级会更换实际三维资产，同时保留库存、订单与顾客。</p>
+    <div class="gallery-grid">
+      <article><img loading="lazy" decoding="async" fetchpriority="low" width="640" height="760" src="/assets/shelves/wood.webp" alt="木色框架与三层饮料陈列"><small>01 · WOOD</small><h3>普通木架</h3><p>容量 24 件 · 开店自带</p><p>暖木框架，三层陈列，普通饮料。</p></article>
+      <article><img loading="lazy" decoding="async" fetchpriority="low" width="640" height="760" src="/assets/shelves/lit.webp" alt="绿色框架与暖色展示灯"><small>02 · LIGHT</small><h3>带灯展示架</h3><p>容量 36 件 · 升级 80 币</p><p>完成 5 笔成交开放；增加一排容量和展示灯带。</p></article>
+      <article><img loading="lazy" decoding="async" fetchpriority="low" width="640" height="760" src="/assets/shelves/chilled.webp" alt="带玻璃双门和灯带的冷藏柜"><small>03 · CHILLED</small><h3>冷藏展示柜</h3><p>容量 48 件 · 升级 160 币</p><p>完成 15 笔成交开放；四层陈列、双门和瓶装冷饮。</p></article>
+    </div>
+    <p id="gallery-contract" class="gallery-contract"></p>
+  </dialog>
+  <dialog id="day-report" aria-labelledby="day-report-title">
+    <div class="gallery-heading"><div><span class="eyebrow">CLOSE THE SHOP · KEEP THE LESSON</span><h2 id="day-report-title">今天的小店，交卷了。</h2></div><button id="close-day-report" class="quiet">回店看看</button></div>
+    <p id="day-report-summary"></p>
+    <div id="day-report-metrics" class="day-report-metrics"></div>
+    <div class="day-report-columns">
+      <section><h3>钱去了哪里？</h3><div id="day-report-finance"></div><p class="report-note">销售毛利＝销售收入−已售商品成本。未售库存仍是资产；采购和设施升级另计现金支出。此实验尚未计入租金、工资等经营费用。</p></section>
+      <section><h3>街坊买得怎么样？</h3><div id="day-report-shopping"></div><p id="day-report-timing" class="report-note"></p></section>
+    </div>
+    <section class="day-feedback"><h3>下一次，可以试试</h3><ul id="day-report-feedback"></ul></section>
+    <section id="day-report-admission"></section>
+    <section id="day-report-periods"></section>
+    <section id="day-report-restocking"></section>
+    <section id="day-report-comparison"></section>
+    <div class="day-replay"><div><strong>保留成绩，同条件再经营一次。</strong><p id="day-replay-copy"></p></div><button id="replay-day" class="primary">保留成绩，重玩 ↻</button></div>
+    <small id="day-condition-id" class="report-note"></small>
+    <button id="choose-next-theme" class="quiet">换个营业主题</button>
+  </dialog>
+  <dialog id="visitor-reset-dialog" aria-labelledby="visitor-reset-title" aria-describedby="visitor-reset-copy">
+    <span class="eyebrow">从头再来</span>
+    <h2 id="visitor-reset-title">清空进度，从头开始？</h2>
+    <p id="visitor-reset-copy">这会重置本机三个主题的进度和比较成绩，回到早餐日：380 币，饮料、面包各 12 件，重新开始新手引导。</p>
+    <p class="report-note">想比较另一种经营方式？请用“保留成绩，同条件重玩”。</p>
+    <p id="visitor-reset-error" role="alert" hidden></p>
+    <div class="visitor-reset-actions">
+      <button id="visitor-reset-cancel" class="quiet" autofocus>取消，保留当前进度</button>
+      <button id="visitor-reset-replay" class="primary">保留成绩，同条件重玩</button>
+      <button id="visitor-reset-confirm" class="quiet">确认从头开始</button>
+    </div>
+  </dialog>
+  <footer>慢一点也没关系，每一笔好生意都算数。<span>GPT-6 ASTRA × BLENDER</span></footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

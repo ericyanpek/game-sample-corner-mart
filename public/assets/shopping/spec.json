@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "breakfastShare": 0.5,
+  "quickPatience": 250,
+  "breakfastPatience": 400,
+  "extraScanTicks": 8,
+  "basket": {
+    "root": "prop.basket",
+    "width": 0.4,
+    "depth": 0.27,
+    "slots": [
+      {
+        "id": "basket.slot.0",
+        "position": [
+          -0.1,
+          -0.264,
+          0
+        ]
+      },
+      {
+        "id": "basket.slot.1",
+        "position": [
+          0.1,
+          -0.264,
+          0
+        ]
+      }
+    ],
+    "itemScale": {
+      "drinks": 0.88,
+      "premium": 0.82,
+      "bread": 0.68,
+      "fruit": 0.82
+    }
+  }
+}

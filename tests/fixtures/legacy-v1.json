@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "tick": 573,
+  "rng": 1710431906,
+  "seed": 20260914,
+  "nextArrival": 597,
+  "nextId": 17,
+  "cash": 61,
+  "shelves": {
+    "drinks": {
+      "unlocked": true,
+      "onHand": 7,
+      "reserved": 6,
+      "received": 0,
+      "sold": 5,
+      "initial": 12
+    },
+    "bread": {
+      "unlocked": false,
+      "onHand": 0,
+      "reserved": 0,
+      "received": 0,
+      "sold": 0,
+      "initial": 0
+    },
+    "fruit": {
+      "unlocked": false,
+      "onHand": 0,
+      "reserved": 0,
+      "received": 0,
+      "sold": 0,
+      "initial": 0
+    }
+  },
+  "upgrades": {
+    "checkout": true,
+    "staff": false,
+    "marketing": false
+  },
+  "customers": [
+    {
+      "id": 9,
+      "product": "drinks",
+      "state": "service",
+      "pos": [
+        -1.7,
+        0.35
+      ],
+      "facing": -2.122451309323443,
+      "path": [],
+      "timer": 8,
+      "queuedAt": 296,
+      "reservation": true,
+      "happy": false,
+      "style": 2
+    },
+    {
+      "id": 10,
+      "product": "drinks",
+      "state": "queue",
+      "pos": [
+        -1.05,
+        0.75
+      ],
+      "facing": -1.5707963267948966,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 367,
+      "reservation": true,
+      "happy": false,
+      "style": 0
+    },
+    {
+      "id": 11,
+      "product": "drinks",
+      "state": "queue",
+      "pos": [
+        -0.43000000000000005,
+        0.75
+      ],
+      "facing": -1.5707963267948966,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 409,
+      "reservation": true,
+      "happy": false,
+      "style": 3
+    },
+    {
+      "id": 12,
+      "product": "drinks",
+      "state": "queue",
+      "pos": [
+        0.18999999999999995,
+        0.75
+      ],
+      "facing": -1.5707963267948966,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 447,
+      "reservation": true,
+      "happy": false,
+      "style": 0
+    },
+    {
+      "id": 13,
+      "product": "drinks",
+      "state": "queue",
+      "pos": [
+        0.8099999999999998,
+        0.75
+      ],
+      "facing": 1.0794992884240269,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 519,
+      "reservation": true,
+      "happy": false,
+      "style": 0
+    },
+    {
+      "id": 14,
+      "product": "drinks",
+      "state": "queue",
+      "pos": [
+        1.43,
+        0.75
+      ],
+      "facing": 1.1601200786348052,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 530,
+      "reservation": true,
+      "happy": false,
+      "style": 0
+    },
+    {
+      "id": 15,
+      "product": "drinks",
+      "state": "enter",
+      "pos": [
+        0.14677835089479035,
+        -0.4208938612416194
+      ],
+      "facing": -1.7063240407803975,
+      "path": [
+        [
+          -1.9,
+          -0.7
+        ]
+      ],
+      "timer": 0,
+      "queuedAt": 0,
+      "reservation": false,
+      "happy": false,
+      "style": 1
+    },
+    {
+      "id": 16,
+      "product": "drinks",
+      "state": "enter",
+      "pos": [
+        2.53491603490551,
+        1.9251300245196266
+      ],
+      "facing": -3.124352982395264,
+      "path": [
+        [
+          2.5,
+          -0.1
+        ],
+        [
+          -1.9,
+          -0.7
+        ]
+      ],
+      "timer": 0,
+      "queuedAt": 0,
+      "reservation": false,
+      "happy": false,
+      "style": 2
+    }
+  ],
+  "queue": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "service": 9,
+  "orders": [
+    {
+      "product": "drinks",
+      "quantity": 12,
+      "duration": 60,
+      "remaining": 60
+    }
+  ],
+  "ledger": {
+    "revenue": 25,
+    "procurement": 24,
+    "upgrades": 60,
+    "unlocks": 0
+  },
+  "stats": {
+    "sold": 5,
+    "arrived": 16,
+    "noStock": 0,
+    "impatient": 3,
+    "full": 0,
+    "firstSale": 176,
+    "goalAt": null
+  },
+  "events": [
+    {
+      "tick": 573,
+      "text": "气泡饮料补货 12 件 · −24 币",
+      "kind": "info"
+    },
+    {
+      "tick": 573,
+      "text": "收银升级：每笔 4 秒",
+      "kind": "info"
+    },
+    {
+      "tick": 500,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 494,
+      "text": "等待太久，一位顾客离开。",
+      "kind": "loss"
+    },
+    {
+      "tick": 419,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 410,
+      "text": "等待太久，一位顾客离开。",
+      "kind": "loss"
+    },
+    {
+      "tick": 395,
+      "text": "等待太久，一位顾客离开。",
+      "kind": "loss"
+    },
+    {
+      "tick": 338,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 257,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 176,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 0,
+      "text": "新店开张！饮料架有 12 件开店库存。",
+      "kind": "info"
+    }
+  ]
+}

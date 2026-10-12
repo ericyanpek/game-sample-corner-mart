@@ -1,0 +1,19 @@
+{
+  "contract": "corner-people-v1",
+  "source": "character-wardrobe.blend",
+  "asset": "/assets/characters/wardrobe.glb",
+  "customers": [
+    {"id":"coral-curls","skin":"#bd805c","hair":"curly","hairColor":"#30251f","outfit":"hoodie","shirt":"#be5f42","trim":"#f5d6a4","trousers":"#344a61","shoes":"#efe0c3","face":"smile","glasses":false},
+    {"id":"blue-bob","skin":"#efc3a2","hair":"bob","hairColor":"#28252a","outfit":"cardigan","shirt":"#527fba","trim":"#fff0d1","trousers":"#6c5651","shoes":"#e4b36b","face":"round","glasses":false},
+    {"id":"plum-silver","skin":"#855035","hair":"crop","hairColor":"#c3bcb2","outfit":"vest","shirt":"#885477","trim":"#f1debd","trousers":"#36404c","shoes":"#dabba2","face":"calm","glasses":true},
+    {"id":"ochre-sweep","skin":"#ca8f67","hair":"sweep","hairColor":"#573522","outfit":"stripe","shirt":"#d29a36","trim":"#fff0cc","trousers":"#4e6575","shoes":"#50392f","face":"smile","glasses":false},
+    {"id":"rose-bun","skin":"#e2ab8b","hair":"bun","hairColor":"#302824","outfit":"cardigan","shirt":"#b67588","trim":"#f4dcc1","trousers":"#555167","shoes":"#e2d6c3","face":"calm","glasses":false},
+    {"id":"cream-curls","skin":"#69432e","hair":"curly","hairColor":"#211e1d","outfit":"stripe","shirt":"#e9d9b1","trim":"#c97651","trousers":"#855341","shoes":"#d9b163","face":"round","glasses":false},
+    {"id":"denim-sweep","skin":"#f0c8a5","hair":"sweep","hairColor":"#925036","outfit":"vest","shirt":"#435f86","trim":"#d7c5a2","trousers":"#967451","shoes":"#eee0c5","face":"smile","glasses":true},
+    {"id":"lilac-long","skin":"#ad7356","hair":"long","hairColor":"#382b28","outfit":"hoodie","shirt":"#9585b6","trim":"#f1dec4","trousers":"#454458","shoes":"#d5c9b0","face":"calm","glasses":false}
+  ],
+  "staff": {
+    "worker":{"id":"restock-helper","skin":"#bd8964","hair":"crop","hairColor":"#362b22","outfit":"uniform","shirt":"#f2deb7","trim":"#e9b550","trousers":"#3b5154","shoes":"#463c31","face":"smile","glasses":false,"cap":"#e3a438","apron":"#255e51"},
+    "cashier":{"id":"cashier","skin":"#d6a07a","hair":"crop","hairColor":"#42342a","outfit":"uniform","shirt":"#f2deb7","trim":"#e9b550","trousers":"#3b5154","shoes":"#463c31","face":"calm","glasses":true,"cap":"#255e51","apron":"#255e51"}
+  }
+}

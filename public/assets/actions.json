@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Walk",
+    "start": 0,
+    "end": 25,
+    "fps": 24
+  },
+  {
+    "name": "Wait",
+    "start": 32,
+    "end": 57,
+    "fps": 24
+  },
+  {
+    "name": "PickUp",
+    "start": 64,
+    "end": 89,
+    "fps": 24
+  },
+  {
+    "name": "Pay",
+    "start": 96,
+    "end": 121,
+    "fps": 24
+  },
+  {
+    "name": "Carry",
+    "start": 128,
+    "end": 153,
+    "fps": 24
+  },
+  {
+    "name": "Stock",
+    "start": 160,
+    "end": 185,
+    "fps": 24
+  }
+]

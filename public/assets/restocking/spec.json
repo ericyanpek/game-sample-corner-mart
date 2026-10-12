@@ -1,0 +1,43 @@
+{
+  "contract": "restocking-crate-v1",
+  "origin": "same center pivot as prop.carton",
+  "dimensionsThree": [
+    0.43,
+    0.31,
+    0.33
+  ],
+  "carryPositionThree": [
+    0,
+    0.53,
+    0.31
+  ],
+  "products": {
+    "drinks": {
+      "root": "prop.crate.drinks",
+      "label": "DRINKS",
+      "color": [
+        0.1,
+        0.36,
+        0.31
+      ]
+    },
+    "bread": {
+      "root": "prop.crate.bread",
+      "label": "BREAD",
+      "color": [
+        0.62,
+        0.34,
+        0.1
+      ]
+    },
+    "fruit": {
+      "root": "prop.crate.fruit",
+      "label": "FRUIT",
+      "color": [
+        0.56,
+        0.22,
+        0.12
+      ]
+    }
+  }
+}

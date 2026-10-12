@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "family": "corner-mart.drinks",
+  "contract": {
+    "units": "metres",
+    "runtime_up_axis": "Y",
+    "root_id": "asset.drinks",
+    "interaction_id": "shelf.drinks",
+    "product": "drinks",
+    "placement": [
+      -1.9,
+      0,
+      -1.7
+    ],
+    "footprint": [
+      1.48,
+      0.9
+    ],
+    "height": 1.76,
+    "stop_local": [
+      0,
+      0,
+      1.0
+    ],
+    "label_local": [
+      0,
+      1.91,
+      0.05
+    ],
+    "unit_prefix": "unit.drinks.",
+    "palette": [
+      "warm oak",
+      "cream",
+      "sage",
+      "terracotta"
+    ]
+  },
+  "tiers": [
+    {
+      "id": 0,
+      "key": "wood",
+      "name": "普通木架",
+      "capacity": 24,
+      "levels": 3,
+      "rows": 2,
+      "upgradeCost": 0,
+      "requiredSales": 0,
+      "description": "温暖木色，装下开店的第一批好生意。"
+    },
+    {
+      "id": 1,
+      "key": "lit",
+      "name": "带灯展示架",
+      "capacity": 36,
+      "levels": 3,
+      "rows": 3,
+      "upgradeCost": 80,
+      "requiredSales": 5,
+      "description": "灯光亮起来，多留一排给街坊喜欢的饮料。"
+    },
+    {
+      "id": 2,
+      "key": "chilled",
+      "name": "冷藏展示柜",
+      "capacity": 48,
+      "levels": 4,
+      "rows": 3,
+      "upgradeCost": 160,
+      "requiredSales": 15,
+      "description": "双开柜门、冷光灯带，开始供应瓶装冷饮。"
+    }
+  ],
+  "regular": {
+    "name": "气泡饮料",
+    "price": 5,
+    "cost": 2
+  },
+  "premium": {
+    "name": "瓶装冷饮",
+    "price": 9,
+    "cost": 4
+  },
+  "door_ids": [
+    "door.drinks.left",
+    "door.drinks.right"
+  ],
+  "door_open_degrees": 100
+}

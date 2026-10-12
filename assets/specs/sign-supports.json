@@ -1,0 +1,12 @@
+{
+  "revision": 3,
+  "units": "metres",
+  "frameX": 0.39,
+  "floorY": -0.015,
+  "hingeY": 1.1,
+  "hingeZ": 0,
+  "hingeLength": 0.048,
+  "frontZ": 0.24,
+  "rearZ": -0.24,
+  "radius": 0.02
+}

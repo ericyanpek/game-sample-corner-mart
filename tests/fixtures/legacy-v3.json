@@ -1,0 +1,577 @@
+{
+  "version": 3,
+  "tick": 11191,
+  "rng": 3291073613,
+  "seed": 20260914,
+  "nextArrival": 11233,
+  "nextId": 184,
+  "cash": 210,
+  "drinksTier": 2,
+  "drinksDoor": 0,
+  "shelves": {
+    "drinks": {
+      "unlocked": true,
+      "onHand": 23,
+      "reserved": 7,
+      "received": 143,
+      "sold": 132,
+      "initial": 12,
+      "premium": 23,
+      "premiumReceived": 24,
+      "premiumSold": 1
+    },
+    "bread": {
+      "unlocked": false,
+      "onHand": 0,
+      "reserved": 0,
+      "received": 0,
+      "sold": 0,
+      "initial": 0,
+      "premium": 0,
+      "premiumReceived": 0,
+      "premiumSold": 0
+    },
+    "fruit": {
+      "unlocked": false,
+      "onHand": 0,
+      "reserved": 0,
+      "received": 0,
+      "sold": 0,
+      "initial": 0,
+      "premium": 0,
+      "premiumReceived": 0,
+      "premiumSold": 0
+    }
+  },
+  "upgrades": {
+    "checkout": false,
+    "staff": false,
+    "marketing": false
+  },
+  "customers": [
+    {
+      "id": 174,
+      "product": "drinks",
+      "state": "leave",
+      "pos": [
+        -1.7000000476837158,
+        0.49000000953674316
+      ],
+      "facing": 0,
+      "path": [
+        [
+          -1.7000000476837158,
+          -0.04
+        ],
+        [
+          2.7,
+          -0.04
+        ],
+        [
+          2.549999952316284,
+          2.799999952316284
+        ]
+      ],
+      "timer": 0,
+      "queuedAt": 10908,
+      "reservation": false,
+      "happy": true,
+      "style": 1,
+      "phaseStarted": 11191,
+      "serviceDuration": 75,
+      "premium": true
+    },
+    {
+      "id": 175,
+      "product": "drinks",
+      "state": "return",
+      "pos": [
+        -0.98,
+        0.30500000000000005
+      ],
+      "facing": 3.141592653589793,
+      "path": [
+        [
+          -0.98,
+          -0.08
+        ],
+        [
+          -1.54,
+          -0.82
+        ]
+      ],
+      "timer": 0,
+      "queuedAt": 10938,
+      "reservation": true,
+      "happy": false,
+      "style": 1,
+      "phaseStarted": 11188,
+      "serviceDuration": 75,
+      "premium": true
+    },
+    {
+      "id": 176,
+      "product": "drinks",
+      "state": "toQueue",
+      "pos": [
+        -0.8377374550740023,
+        0.6563247571932779
+      ],
+      "facing": -1.7613493553521014,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 10997,
+      "reservation": true,
+      "happy": false,
+      "style": 1,
+      "phaseStarted": 11188,
+      "serviceDuration": 75,
+      "premium": true
+    },
+    {
+      "id": 177,
+      "product": "drinks",
+      "state": "toQueue",
+      "pos": [
+        -0.19999999999999996,
+        0.68
+      ],
+      "facing": -1.5707963267948966,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 11034,
+      "reservation": true,
+      "happy": false,
+      "style": 0,
+      "phaseStarted": 11188,
+      "serviceDuration": 75,
+      "premium": true
+    },
+    {
+      "id": 178,
+      "product": "drinks",
+      "state": "toQueue",
+      "pos": [
+        0.43999999999999995,
+        0.68
+      ],
+      "facing": -1.5707963267948966,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 11064,
+      "reservation": true,
+      "happy": false,
+      "style": 0,
+      "phaseStarted": 11188,
+      "serviceDuration": 75,
+      "premium": true
+    },
+    {
+      "id": 179,
+      "product": "drinks",
+      "state": "toQueue",
+      "pos": [
+        1.08,
+        0.68
+      ],
+      "facing": -1.5707963267948966,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 11094,
+      "reservation": true,
+      "happy": false,
+      "style": 2,
+      "phaseStarted": 11188,
+      "serviceDuration": 75,
+      "premium": true
+    },
+    {
+      "id": 180,
+      "product": "drinks",
+      "state": "toQueue",
+      "pos": [
+        -0.49521106222285516,
+        1.1390579083206487
+      ],
+      "facing": 1.8803667700299966,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 11124,
+      "reservation": true,
+      "happy": false,
+      "style": 0,
+      "phaseStarted": 11188,
+      "serviceDuration": 75,
+      "premium": true
+    },
+    {
+      "id": 181,
+      "product": "drinks",
+      "state": "toQueue",
+      "pos": [
+        -0.593810241183597,
+        1.2293725228263557
+      ],
+      "facing": 1.8183364597295388,
+      "path": [],
+      "timer": 0,
+      "queuedAt": 11154,
+      "reservation": true,
+      "happy": false,
+      "style": 1,
+      "phaseStarted": 11188,
+      "serviceDuration": 75,
+      "premium": true
+    },
+    {
+      "id": 182,
+      "product": "drinks",
+      "state": "enter",
+      "pos": [
+        -1.24938031894804,
+        -0.1681705514739414
+      ],
+      "facing": -1.588976141529324,
+      "path": [
+        [
+          -1.9,
+          -0.18
+        ]
+      ],
+      "timer": 0,
+      "queuedAt": 0,
+      "reservation": false,
+      "happy": false,
+      "style": 1,
+      "phaseStarted": 11138,
+      "serviceDuration": 75,
+      "premium": false
+    },
+    {
+      "id": 183,
+      "product": "drinks",
+      "state": "enter",
+      "pos": [
+        -0.24954556722856236,
+        -0.14999173814492134
+      ],
+      "facing": -1.588976141529324,
+      "path": [
+        [
+          -1.9,
+          -0.18
+        ]
+      ],
+      "timer": 0,
+      "queuedAt": 0,
+      "reservation": false,
+      "happy": false,
+      "style": 2,
+      "phaseStarted": 11146,
+      "serviceDuration": 75,
+      "premium": false
+    }
+  ],
+  "queue": [
+    176,
+    177,
+    178,
+    179,
+    180,
+    181
+  ],
+  "service": null,
+  "orders": [],
+  "ledger": {
+    "revenue": 664,
+    "procurement": 334,
+    "upgrades": 240,
+    "unlocks": 0
+  },
+  "stats": {
+    "sold": 132,
+    "arrived": 183,
+    "noStock": 0,
+    "impatient": 43,
+    "full": 0,
+    "firstSale": 190,
+    "goalAt": null
+  },
+  "events": [
+    {
+      "tick": 11191,
+      "text": "瓶装冷饮成交 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 11188,
+      "text": "一位顾客等得太久，正在放回商品。",
+      "kind": "loss"
+    },
+    {
+      "tick": 11111,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 11102,
+      "text": "瓶装冷饮已上架 12 件",
+      "kind": "info"
+    },
+    {
+      "tick": 11031,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 11018,
+      "text": "瓶装冷饮补货 12 件 · −48 币",
+      "kind": "info"
+    },
+    {
+      "tick": 10951,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 10871,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 10791,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 10711,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 10622,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 10542,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 10462,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 10440,
+      "text": "一位顾客等得太久，正在放回商品。",
+      "kind": "loss"
+    },
+    {
+      "tick": 10380,
+      "text": "一位顾客等得太久，正在放回商品。",
+      "kind": "loss"
+    },
+    {
+      "tick": 10376,
+      "text": "气泡饮料成交 · +5 币",
+      "kind": "sale"
+    }
+  ],
+  "delivery": null,
+  "receipts": [
+    {
+      "id": 109,
+      "customer": 144,
+      "product": "drinks",
+      "tick": 9330,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 110,
+      "customer": 145,
+      "product": "drinks",
+      "tick": 9410,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 111,
+      "customer": 146,
+      "product": "drinks",
+      "tick": 9490,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 112,
+      "customer": 147,
+      "product": "drinks",
+      "tick": 9570,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 113,
+      "customer": 148,
+      "product": "drinks",
+      "tick": 9650,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 114,
+      "customer": 149,
+      "product": "drinks",
+      "tick": 9730,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 115,
+      "customer": 151,
+      "product": "drinks",
+      "tick": 9815,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 116,
+      "customer": 153,
+      "product": "drinks",
+      "tick": 9895,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 117,
+      "customer": 155,
+      "product": "drinks",
+      "tick": 9975,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 118,
+      "customer": 156,
+      "product": "drinks",
+      "tick": 10055,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 119,
+      "customer": 157,
+      "product": "drinks",
+      "tick": 10135,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 120,
+      "customer": 158,
+      "product": "drinks",
+      "tick": 10215,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 121,
+      "customer": 159,
+      "product": "drinks",
+      "tick": 10295,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 122,
+      "customer": 162,
+      "product": "drinks",
+      "tick": 10376,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 123,
+      "customer": 164,
+      "product": "drinks",
+      "tick": 10462,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 124,
+      "customer": 166,
+      "product": "drinks",
+      "tick": 10542,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 125,
+      "customer": 167,
+      "product": "drinks",
+      "tick": 10622,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 126,
+      "customer": 168,
+      "product": "drinks",
+      "tick": 10711,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 127,
+      "customer": 169,
+      "product": "drinks",
+      "tick": 10791,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 128,
+      "customer": 170,
+      "product": "drinks",
+      "tick": 10871,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 129,
+      "customer": 171,
+      "product": "drinks",
+      "tick": 10951,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 130,
+      "customer": 172,
+      "product": "drinks",
+      "tick": 11031,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 131,
+      "customer": 173,
+      "product": "drinks",
+      "tick": 11111,
+      "amount": 5,
+      "premium": false
+    },
+    {
+      "id": 132,
+      "customer": 174,
+      "product": "drinks",
+      "tick": 11191,
+      "amount": 9,
+      "premium": true
+    }
+  ]
+}

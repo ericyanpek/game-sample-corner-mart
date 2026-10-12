@@ -1,0 +1,23 @@
+{
+  "name": "game-sample-corner-mart",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 9418 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 9418",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "@types/three": "0.180.0",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2",
+    "vite": "7.1.5"
+  }
+}

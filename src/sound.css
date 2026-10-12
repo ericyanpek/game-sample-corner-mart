@@ -1,0 +1,10 @@
+.camera-tools #sound-toggle{display:flex;align-items:center;justify-content:center;gap:5px;min-width:44px}
+#sound-toggle svg{width:17px;height:17px;flex-shrink:0}
+#sound-toggle .sound-muted{display:none}
+#sound-toggle[aria-pressed=false] .sound-waves{display:none}
+#sound-toggle[aria-pressed=false] .sound-muted{display:block}
+#sound-toggle[aria-pressed=false]{color:#7a8275;background:#efeee5}
+@media(pointer:coarse),(max-width:720px){
+  .camera-tools #sound-toggle{width:44px;padding:8px}
+  #sound-toggle span{display:none}
+}

@@ -1,0 +1,50 @@
+{
+  "contract": "wall-checkouts-v1",
+  "asset": "/assets/checkouts/counter.glb",
+  "footprint": [
+    1.15,
+    0.62
+  ],
+  "height": 0.52,
+  "itemSlots": [[0.2, 0.536, -0.15], [0.2, 0.536, 0.14]],
+  "payment": {
+    "restAngle": -0.12,
+    "reachAngle": 1.13,
+    "forwardReach": 0.04,
+    "upwardReach": 0
+  },
+  "stations": {
+    "main": {
+      "label": "1号收银台",
+      "position": [
+        -2.55,
+        0.4
+      ],
+      "yaw": 1.5707963267948966,
+      "cashier": [
+        -3.25,
+        0.4
+      ],
+      "customer": [
+        -1.7,
+        0.4
+      ]
+    },
+    "flex": {
+      "label": "2号收银台",
+      "position": [
+        -2.55,
+        2.6
+      ],
+      "yaw": 1.5707963267948966,
+      "cashier": [
+        -3.25,
+        2.6
+      ],
+      "customer": [
+        -1.7,
+        2.6
+      ]
+    }
+  }
+}

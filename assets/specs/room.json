@@ -1,0 +1,14 @@
+{
+  "revision": 2,
+  "units": "metres",
+  "horizontalScale": 1.3,
+  "assets": {
+    "v1": "/assets/rooms/spacious-v1.glb",
+    "v2": "/assets/rooms/spacious-v2.glb"
+  },
+  "cameraTarget": [0, 0.75, 0.4],
+  "originalFixturePositions": {
+    "bread": [0, -1.7],
+    "fruit": [1.9, -1.7]
+  }
+}

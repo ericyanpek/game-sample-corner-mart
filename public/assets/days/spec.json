@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "board": {
+    "root": "asset.day-sign",
+    "placement": [
+      -2.0,
+      -0.17,
+      3.9
+    ],
+    "yaw": 0.35,
+    "size": [
+      0.82,
+      1.2,
+      0.55
+    ]
+  },
+  "themes": {
+    "breakfast": {
+      "name": "早餐日",
+      "subtitle": "先备好一份早餐",
+      "description": "饮料和面包常常一起买，两种货都要跟得上。",
+      "advice": "留意面包库存；一张清单缺一件，也会少一笔完整购物。",
+      "signTitle": "BREAKFAST",
+      "signDetail": "DRINK + BREAD",
+      "breakfastShare": 0.6,
+      "peak": null,
+      "accent": "#618665",
+      "lighting": {
+        "background": "#d4e1d8",
+        "sky": "#fff7df",
+        "ground": "#819b91",
+        "ambient": 2.4,
+        "sun": "#ffe9be",
+        "intensity": 3.2,
+        "position": [
+          5,
+          9,
+          5
+        ],
+        "fill": "#c4e5ff",
+        "fillIntensity": 1.1,
+        "exposure": 1.08,
+        "interior": 0
+      }
+    },
+    "hot": {
+      "name": "炎热日",
+      "subtitle": "街坊想来一杯凉的",
+      "description": "单买饮料的街坊更多，面包需求相对减少。",
+      "advice": "优先检查饮料库存和货架容量，给接下来的补货留些钱。",
+      "signTitle": "COOL DRINKS",
+      "signDetail": "A SUNNY DAY",
+      "breakfastShare": 0.18,
+      "peak": null,
+      "accent": "#c88b3e",
+      "lighting": {
+        "background": "#efe2bd",
+        "sky": "#fff0c7",
+        "ground": "#ab9677",
+        "ambient": 2.6,
+        "sun": "#fff1b5",
+        "intensity": 3.8,
+        "position": [
+          1,
+          11,
+          3
+        ],
+        "fill": "#d6e8ff",
+        "fillIntensity": 0.85,
+        "exposure": 1.03,
+        "interior": 0
+      }
+    },
+    "rush": {
+      "name": "下班高峰",
+      "subtitle": "下班的人流来了",
+      "description": "购物清单与早餐日相同，但更多街坊集中在营业中段到店。",
+      "advice": "在高峰前备好货，考虑收银升级和通道，避免人多时再搬货架。",
+      "signTitle": "AFTER WORK",
+      "signDetail": "READY FOR THE RUSH",
+      "breakfastShare": 0.6,
+      "peak": [
+        600,
+        1200
+      ],
+      "accent": "#91749d",
+      "lighting": {
+        "background": "#b7bfce",
+        "sky": "#d6daf3",
+        "ground": "#72748a",
+        "ambient": 1.65,
+        "sun": "#ffc187",
+        "intensity": 2.2,
+        "position": [
+          -5,
+          3,
+          5
+        ],
+        "fill": "#a2b9f2",
+        "fillIntensity": 0.75,
+        "exposure": 1.12,
+        "interior": 2.8
+      }
+    }
+  }
+}

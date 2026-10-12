@@ -1,0 +1,35 @@
+.restock-panel{margin-top:17px;border:1px solid #d8ddca;border-radius:13px;background:#faf8ef;padding:19px}
+.restock-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:17px}
+.restock-options button{border:1px solid #d8ddca;border-radius:10px;padding:13px 12px;text-align:left;background:#f0f1e5;color:#4c6c57}
+.restock-options button.active{background:#e4eddb;border-color:#779c7f;box-shadow:inset 0 0 0 1px #779c7f44}
+.restock-options button:disabled{opacity:.55}
+.restock-options strong{display:block;font-size:13px}
+.restock-options small{display:block;margin-top:6px;color:#849276;font-size:10px;line-height:1.6}
+.restock-tasks{display:grid;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr);gap:9px;align-items:center}
+.restock-tasks>div{border-radius:9px;border:1px solid #e0e3d4;background:#f2f2e7;padding:13px 14px;min-width:0;border-left:4px solid #a3af96}
+.restock-tasks>div[data-goods="drinks"]{border-left-color:#4d9189;background:#e8efe8}
+.restock-tasks>div[data-goods="bread"]{border-left-color:#c49a51;background:#f4eddc}
+.restock-tasks>div[data-goods="fruit"]{border-left-color:#b67559;background:#f1e9de}
+.restock-tasks small{font-size:10px;color:#8c987f;display:block}
+.restock-tasks strong{font-weight:550;font-size:12px;line-height:1.8;color:#49664f;display:block;margin-top:6px}
+.restock-arrow{color:#a9b49c;text-align:center}
+.restock-footer{border-top:1px solid #e0e3d4;padding-top:13px;display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;font-size:10px;line-height:1.8;color:#829276}
+#restock-policy-name{font-weight:550;color:#4e7756}
+#day-report-restocking{margin:22px 0}
+.crate-previews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.crate-previews figure{margin:0;background:#f1f0e5;border-radius:10px;overflow:hidden}
+.crate-previews img{display:block;width:100%}
+.crate-previews figcaption{padding:7px 10px;font-size:10px}
+.action-label.worker{cursor:pointer;pointer-events:auto}
+@media(max-width:720px){
+  .restock-panel{padding:14px}
+  .restock-panel .shopping-heading{flex-direction:row;align-items:center}
+  .restock-options{gap:6px}
+  .restock-options button{padding:12px 8px;min-height:70px}
+  .restock-options strong{font-size:12px}
+  .restock-options small{font-size:10px}
+  .restock-tasks{gap:5px;grid-template-columns:minmax(0,1fr) 14px minmax(0,1fr)}
+  .restock-tasks>div{padding:10px 9px}
+  .restock-tasks strong{font-size:11px}
+  .restock-footer{font-size:10px}
+}

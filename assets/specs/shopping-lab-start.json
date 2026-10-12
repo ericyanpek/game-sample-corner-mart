@@ -1,0 +1,633 @@
+{
+  "version": 5,
+  "tick": 13618,
+  "rng": 1,
+  "seed": 1,
+  "nextArrival": 13633,
+  "nextId": 194,
+  "cash": 202,
+  "drinksTier": 2,
+  "drinksDoor": 0,
+  "shelves": {
+    "drinks": {
+      "unlocked": true,
+      "onHand": 11,
+      "reserved": 0,
+      "received": 185,
+      "sold": 186,
+      "initial": 12,
+      "premium": 11,
+      "premiumReceived": 36,
+      "premiumSold": 25
+    },
+    "bread": {
+      "unlocked": true,
+      "onHand": 12,
+      "reserved": 0,
+      "received": 12,
+      "sold": 0,
+      "initial": 0,
+      "premium": 0,
+      "premiumReceived": 0,
+      "premiumSold": 0
+    },
+    "fruit": {
+      "unlocked": false,
+      "onHand": 0,
+      "reserved": 0,
+      "received": 0,
+      "sold": 0,
+      "initial": 0,
+      "premium": 0,
+      "premiumReceived": 0,
+      "premiumSold": 0
+    }
+  },
+  "upgrades": {
+    "checkout": true,
+    "staff": true,
+    "marketing": false
+  },
+  "customers": [],
+  "queue": [],
+  "service": null,
+  "orders": [],
+  "ledger": {
+    "revenue": 1030,
+    "procurement": 478,
+    "upgrades": 370,
+    "unlocks": 100
+  },
+  "stats": {
+    "sold": 186,
+    "arrived": 208,
+    "noStock": 0,
+    "impatient": 7,
+    "full": 15,
+    "firstSale": 190,
+    "goalAt": 13539,
+    "unitsSold": 186,
+    "multiSales": 0,
+    "partialSales": 0,
+    "missingItems": 0
+  },
+  "events": [
+    {
+      "tick": 13596,
+      "text": "现烤面包已上架 12 件",
+      "kind": "info"
+    },
+    {
+      "tick": 13539,
+      "text": "现烤面包补货 12 件 · −36 币",
+      "kind": "info"
+    },
+    {
+      "tick": 13539,
+      "text": "开店目标达成！你已经完成 30 笔成交，并经营两类商品。",
+      "kind": "info"
+    },
+    {
+      "tick": 13539,
+      "text": "现烤面包货架已解锁，记得购买首批库存。",
+      "kind": "info"
+    },
+    {
+      "tick": 13495,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 13433,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 13286,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 13154,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 13098,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 13029,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 12975,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 12921,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 12796,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 12702,
+      "text": "瓶装冷饮已上架 12 件",
+      "kind": "info"
+    },
+    {
+      "tick": 12594,
+      "text": "瓶装冷饮 · 1 件一单 · +9 币",
+      "kind": "sale"
+    },
+    {
+      "tick": 12573,
+      "text": "瓶装冷饮补货 12 件 · −48 币",
+      "kind": "info"
+    }
+  ],
+  "delivery": null,
+  "receipts": [
+    {
+      "id": 163,
+      "customer": 167,
+      "product": "drinks",
+      "premium": true,
+      "tick": 10818,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 164,
+      "customer": 168,
+      "product": "drinks",
+      "premium": true,
+      "tick": 10928,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 165,
+      "customer": 169,
+      "product": "drinks",
+      "premium": true,
+      "tick": 11154,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 166,
+      "customer": 172,
+      "product": "drinks",
+      "premium": true,
+      "tick": 11391,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 167,
+      "customer": 173,
+      "product": "drinks",
+      "premium": true,
+      "tick": 11568,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 168,
+      "customer": 174,
+      "product": "drinks",
+      "premium": true,
+      "tick": 11659,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 169,
+      "customer": 175,
+      "product": "drinks",
+      "premium": true,
+      "tick": 11731,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 170,
+      "customer": 176,
+      "product": "drinks",
+      "premium": true,
+      "tick": 11804,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 171,
+      "customer": 177,
+      "product": "drinks",
+      "premium": true,
+      "tick": 11895,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 172,
+      "customer": 178,
+      "product": "drinks",
+      "premium": true,
+      "tick": 11943,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 173,
+      "customer": 179,
+      "product": "drinks",
+      "premium": true,
+      "tick": 12102,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 174,
+      "customer": 180,
+      "product": "drinks",
+      "premium": true,
+      "tick": 12171,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 175,
+      "customer": 181,
+      "product": "drinks",
+      "premium": true,
+      "tick": 12239,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 176,
+      "customer": 182,
+      "product": "drinks",
+      "premium": true,
+      "tick": 12309,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 177,
+      "customer": 184,
+      "product": "drinks",
+      "premium": true,
+      "tick": 12594,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 178,
+      "customer": 185,
+      "product": "drinks",
+      "premium": true,
+      "tick": 12796,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 179,
+      "customer": 186,
+      "product": "drinks",
+      "premium": true,
+      "tick": 12921,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 180,
+      "customer": 187,
+      "product": "drinks",
+      "premium": true,
+      "tick": 12975,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 181,
+      "customer": 188,
+      "product": "drinks",
+      "premium": true,
+      "tick": 13029,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 182,
+      "customer": 189,
+      "product": "drinks",
+      "premium": true,
+      "tick": 13098,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 183,
+      "customer": 190,
+      "product": "drinks",
+      "premium": true,
+      "tick": 13154,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 184,
+      "customer": 191,
+      "product": "drinks",
+      "premium": true,
+      "tick": 13286,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 185,
+      "customer": 192,
+      "product": "drinks",
+      "premium": true,
+      "tick": 13433,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    },
+    {
+      "id": 186,
+      "customer": 193,
+      "product": "drinks",
+      "premium": true,
+      "tick": 13495,
+      "amount": 9,
+      "lines": [
+        {
+          "product": "drinks",
+          "premium": true,
+          "amount": 9
+        }
+      ],
+      "requested": [
+        "drinks"
+      ],
+      "missing": []
+    }
+  ],
+  "layoutId": "aisle",
+  "layoutChange": null,
+  "layoutMetrics": {
+    "since": 13618,
+    "waitTicks": 0,
+    "waitCount": 0,
+    "deliveryTicks": 0,
+    "deliveryCount": 0,
+    "lost": 0,
+    "sold": 0,
+    "blockedTicks": 0,
+    "walkMeters": 0
+  },
+  "access": {
+    "drinks": null,
+    "bread": null,
+    "fruit": null
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "revision": 1,
+  "axes": "Three.js Y-up; face +Z",
+  "panel": {"centre": [0, 0.7, 0.058], "size": [0.73, 0.84, 0.055]},
+  "back": {"centre": [0, 0.7, 0.01], "size": [0.73, 0.84, 0.065]},
+  "textZ": 0.0885,
+  "ruleZ": 0.09,
+  "croissant": {"centre": [0.14, 0.60, 0.125], "size": [0.34, 0.08, 0.20], "rotationX": 1.5707963267948966},
+  "canZ": 0.15,
+  "canLabelZ": 0.219,
+  "sunZ": 0.0975,
+  "sunRayZ": 0.0935,
+  "coldCupZ": 0.155,
+  "clockZ": 0.1025,
+  "clockTickZ": 0.1255,
+  "clockHandZ": 0.13
+}

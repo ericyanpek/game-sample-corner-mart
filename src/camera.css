@@ -1,0 +1,27 @@
+.camera-tools{position:absolute;top:12px;right:12px;z-index:3;display:flex;flex-direction:column;align-items:flex-end;gap:7px;max-height:calc(100% - 24px)}
+.camera-actions{display:flex;gap:6px;flex-shrink:0}
+.camera-tools .camera-actions button{position:static;min-height:38px;min-width:64px;padding:8px 12px;border:1px solid #f9fcf4;border-radius:20px;background:#fffaf0f2;color:#496951;font-size:11px;box-shadow:0 2px 8px #30433113}
+.camera-tools .camera-actions button:hover,.camera-tools #camera-toggle[aria-expanded=true]{background:#e8f0dd;border-color:#bacdaf}
+#camera-panel{padding:10px;border-radius:16px;background:#fffaf0f5;border:1px solid #f9fcf4;box-shadow:0 5px 24px #30433124;min-height:0;overflow:auto;overscroll-behavior:contain}
+#camera-panel[hidden],.world-label[hidden]{display:none!important}
+.camera-elevations{display:flex;gap:4px;margin-bottom:7px}
+.camera-elevations button{flex:1;min-height:36px;padding:6px 7px;border:1px solid #d0dcc5;border-radius:9px;background:#edf2e5;color:#426449;font-size:11px;white-space:nowrap}
+.camera-elevations button:hover{background:#dce8cf}
+.camera-elevations small{font-size:9px;color:#718069}
+.camera-pad{display:grid;grid-template-columns:repeat(3,44px);grid-template-rows:repeat(3,38px);gap:3px;align-items:center;justify-items:center}
+.camera-pad button{width:44px;height:38px;padding:0;font-size:20px;border:1px solid #d0dcc5;border-radius:10px;background:#edf2e5;color:#426449}
+.camera-pad button:hover{background:#dce8cf}
+.camera-pad [data-camera-direction=up]{grid-area:1/2}
+.camera-pad [data-camera-direction=left]{grid-area:2/1}
+.camera-pad span{grid-area:2/2;color:#92a587;font-size:18px}
+.camera-pad [data-camera-direction=right]{grid-area:2/3}
+.camera-pad [data-camera-direction=down]{grid-area:3/2}
+#camera-panel p{margin:7px 0 0;color:#718069;text-align:center;font-size:10px;line-height:1.6}
+#world:focus-visible{outline:3px solid #dc8c4d;outline-offset:-4px}
+@media(pointer:coarse),(max-width:720px){
+  .camera-tools{top:8px;right:8px;max-height:calc(100% - 16px)}
+  .camera-tools .camera-actions button{min-height:44px;padding:8px 10px}
+  .camera-pad{grid-template-rows:repeat(3,44px)}
+  .camera-pad button{height:44px}
+  .camera-elevations button{min-height:44px}
+}
